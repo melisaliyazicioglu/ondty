@@ -5,11 +5,11 @@ public class Message {
 	private int messagestate;  // mesajýn alýnýp alýnmadýðýprivate String messagecontent;  // text veri tipi nasýl tanýmlanýr?
 
 	private String messagecontent;  
-	private long conversationid;  //foreign key
+	private long conversationid; 
 
 //	@Column(name="messagestate")
 	private MessageState messageState;
 	
-	private State state;   //annotation
+	private State state;  
 
 }
