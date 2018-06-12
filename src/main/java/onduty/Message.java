@@ -2,12 +2,11 @@ package onduty;
 public class Message {
 	
 	private long messsageid;  
-	private int messagestate;  // mesajın alınıp alınmadığıprivate String messagecontent;  // text veri tipi nasıl tanımlanır?
-
+	private int messagestate;  
 	private String messagecontent;  
 	private long conversationid; 
 
-//	@Column(name="messagestate")
+   // @Column(name="messagestate")
 	private MessageState messageState;
 	
 	private State state;  
