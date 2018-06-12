@@ -1,13 +1,14 @@
-package main.java.onduty;
-
+package onduty;
 public class Message {
 	
-	private long messsageid;  //bigint--> long
-	private int messagestate;
-	private int state;
-	private String messagecontent;  // text veri tipi nas�l tan�mlan�r?
-	private long conversationid;  //foreign key
+	private long messsageid;  
+	private int messagestate;  
+	private String messagecontent;  
+	private long conversationid; 
+
+   // @Column(name="messagestate")
+	private MessageState messageState;
 	
-	
+	private State state;  
 
 }
