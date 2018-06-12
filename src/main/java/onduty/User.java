@@ -1,5 +1,5 @@
-package main.java.onduty;
+package onduty;
 
 public class User {
-
+ 
 }
