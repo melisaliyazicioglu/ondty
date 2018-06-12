@@ -1,4 +1,4 @@
-package onduty;
+package main.java.onduty;
 
 public class User {
 
