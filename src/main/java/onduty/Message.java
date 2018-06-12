@@ -1,11 +1,11 @@
-package onduty;
+package main.java.onduty;
 
 public class Message {
 	
 	private long messsageid;  //bigint--> long
 	private int messagestate;
 	private int state;
-	private String messagecontent;  // text veri tipi nasýl tanýmlanýr?
+	private String messagecontent;  // text veri tipi nasï¿½l tanï¿½mlanï¿½r?
 	private long conversationid;  //foreign key
 	
 	
