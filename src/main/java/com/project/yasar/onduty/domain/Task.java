@@ -3,6 +3,7 @@ package com.project.yasar.onduty.domain;
 import javax.persistence.*;
 import java.util.Date;
 
+@Entity // maping class yazýp çaðýrcaz 
 public class Task {
 
 	

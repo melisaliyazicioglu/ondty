@@ -4,6 +4,7 @@ import java.util.Date;
                                //foreign key yok 
 import javax.persistence.*;
 
+@Entity
 public class Project {
 	
 	 @Id   
