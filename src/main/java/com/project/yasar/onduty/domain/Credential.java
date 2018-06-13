@@ -1,35 +1,46 @@
 package com.project.yasar.onduty.domain;
+import javax.persistence.*;
 
-public class Credential {
-
-    private long credentialid;
-    private long userid;
+@Entity
+public class Credential{
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private long id;
+    @JoinColumn(name = "user_id")
+    @OneToOne(cascade = CascadeType.DETACH)
+    private User user;
+    @Column
     private String username;
+    @Column
     private String password;
-    boolean usertype;
+    @Column
+    @Enumerated(EnumType.ORDINAL)
+    private UserType userType;
 
-    public Credential(long credentialid, long userid, String username, String password, boolean usertype) {
-        this.credentialid = credentialid;
-        this.userid = userid;
+    public Credential(User user, String username, String password, UserType userType) {
+        this.user = user;
         this.username = username;
         this.password = password;
-        this.usertype = usertype;
+        this.userType = userType;
     }
 
-    public long getCredentialid() {
-        return credentialid;
+    public Credential() {
     }
 
-    public void setCredentialid(long credentialid) {
-        this.credentialid = credentialid;
+    public long getId() {
+        return id;
     }
 
-    public long getUserid() {
-        return userid;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public void setUserid(long userid) {
-        this.userid = userid;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getUsername() {
@@ -48,11 +59,11 @@ public class Credential {
         this.password = password;
     }
 
-    public boolean isUsertype() {
-        return usertype;
+    public UserType getUserType() {
+        return userType;
     }
 
-    public void setUsertype(boolean usertype) {
-        this.usertype = usertype;
+    public void setUserType(UserType userType) {
+        this.userType = userType;
     }
 }
