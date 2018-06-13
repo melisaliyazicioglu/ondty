@@ -1,6 +1,7 @@
 package com.project.yasar.onduty.domain;
 
 import javax.persistence.*;
+
 @Entity
 public class MessageInformation {
 
@@ -11,26 +12,41 @@ public class MessageInformation {
 	
 	@JoinColumn(name = "sender_id")
 	@OneToOne(cascade = CascadeType.DETACH)
-	private User user;
+	private User sender;
 	
 	@JoinColumn(name = "recevier_id") 
 	@OneToOne(cascade = CascadeType.DETACH)
-	private User user1; //user1 i kabul edermi,görürmü
+	private User recevier;
 	
 	@JoinColumn(name = "message_id")
 	@OneToOne(cascade = CascadeType.DETACH)
 	private Message message;
 
-	public MessageInformation(User user, User user1, Message message) {
-		super();
-		this.user = user;
-		this.user1 = user1;
+	public MessageInformation(User sender, User recevier, Message message) {
+		this.sender = sender;
+		this.recevier = recevier;
 		this.message = message;
 	}
 
 	public MessageInformation() {
 		super();
 
+	}
+
+	public User getSender() {
+		return sender;
+	}
+
+	public void setSender(User sender) {
+		this.sender = sender;
+	}
+
+	public User getRecevier() {
+		return recevier;
+	}
+
+	public void setRecevier(User recevier) {
+		this.recevier = recevier;
 	}
 
 	public long getId() {
@@ -42,19 +58,19 @@ public class MessageInformation {
 	}
 
 	public User getUser() {
-		return user;
+		return sender;
 	}
 
 	public void setUser(User user) {
-		this.user = user;
+		this.sender = sender;
 	}
 
 	public User getUser1() {
-		return user1;
+		return recevier;
 	}
 
 	public void setUser1(User user1) {
-		this.user1 = user1;
+		this.recevier = recevier;
 	}
 
 	public Message getMessage() {
@@ -65,7 +81,7 @@ public class MessageInformation {
 		this.message = message;
 	}
 	
-	
+
 
 
 }

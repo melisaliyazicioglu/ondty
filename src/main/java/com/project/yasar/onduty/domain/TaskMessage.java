@@ -1,19 +1,30 @@
 package com.project.yasar.onduty.domain;
 
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+@Entity
 public class TaskMessage {
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
+    @Column
     private String content;
+    @Column
     private Date enrtyDate;
-    private Personal personal;
+    @JoinColumn(name = "personal_id")
+    @OneToMany(cascade = CascadeType.DETACH)
+    private List<Personal> personals = new ArrayList<Personal>();
+    @JoinColumn(name = "task_id")
+    @ManyToOne(cascade = CascadeType.DETACH)
     private Task task;
 
-    public TaskMessage(String content, Date enrtyDate, Personal personal, Task task) {
-
+    public TaskMessage(String content, Date enrtyDate, List<Personal> personals, Task task) {
         this.content = content;
         this.enrtyDate = enrtyDate;
-        this.personal = personal;
+        this.personals = personals;
         this.task = task;
     }
 
@@ -44,12 +55,12 @@ public class TaskMessage {
         this.enrtyDate = enrtyDate;
     }
 
-    public Personal getPersonal() {
-        return personal;
+    public List<Personal> getPersonals() {
+        return personals;
     }
 
-    public void setPersonal(Personal personal) {
-        this.personal = personal;
+    public void setPersonals(List<Personal> personals) {
+        this.personals = personals;
     }
 
     public Task getTask() {

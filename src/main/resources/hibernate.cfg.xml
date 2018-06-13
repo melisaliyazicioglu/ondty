@@ -14,6 +14,23 @@
         <mapping class="com.project.yasar.onduty.domain.User"/>
         <mapping class="com.project.yasar.onduty.domain.Credential"/>
         <mapping class="com.project.yasar.onduty.domain.Personal"/>
+        <mapping class="com.project.yasar.onduty.domain.Group"/>
+        <mapping class="com.project.yasar.onduty.domain.Role"/>
+        <mapping class="com.project.yasar.onduty.domain.TaskMessage"/>
+        <mapping class="com.project.yasar.onduty.domain.Right"/>
+        <mapping class="com.project.yasar.onduty.domain.Department"/>
+        <mapping class="com.project.yasar.onduty.domain.UserType"/>
+        <mapping class="com.project.yasar.onduty.domain.Conversation"/>
+        <mapping class="com.project.yasar.onduty.domain.Message"/>
+        <mapping class="com.project.yasar.onduty.domain.MessageInformation"/>
+        <mapping class="com.project.yasar.onduty.domain.Project"/>
+        <mapping class="com.project.yasar.onduty.domain.MessageState"/>
+        <mapping class="com.project.yasar.onduty.domain.ProjectState"/>
+        <mapping class="com.project.yasar.onduty.domain.State"/>
+        <mapping class="com.project.yasar.onduty.domain.StateType"/>
+        <mapping class="com.project.yasar.onduty.domain.TaskPriority"/>
+        <mapping class="com.project.yasar.onduty.domain.TaskStateType"/>
+        <mapping class="com.project.yasar.onduty.domain.Task"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -1,14 +1,36 @@
 package com.project.yasar.onduty.domain;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
 public class Role {
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
+    @Column
     private String roleName;
+    @Column
+    @Enumerated(EnumType.ORDINAL)
     private State state;
 
-    public Role(String roleName, State state) {
+    @JoinColumn(name = "right_id")
+    @ManyToMany(cascade = CascadeType.DETACH)
+    private List<Right> rights = new ArrayList<Right>();
 
+    public Role(String roleName, State state, List<Right> rights) {
         this.roleName = roleName;
         this.state = state;
+        this.rights = rights;
+    }
+
+    public List<Right> getRights() {
+        return rights;
+    }
+
+    public void setRights(List<Right> rights) {
+        this.rights = rights;
     }
 
     public Role() {

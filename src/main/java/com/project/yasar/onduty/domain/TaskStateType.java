@@ -1,6 +1,6 @@
 package com.project.yasar.onduty.domain;
 
 public enum TaskStateType {
-ACTÝVE,PASSÝVE
+ACTIVE,PASSIVE
 
 }

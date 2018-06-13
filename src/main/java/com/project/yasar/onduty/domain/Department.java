@@ -1,6 +1,9 @@
 package com.project.yasar.onduty.domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Department {
 	
@@ -10,6 +13,11 @@ public class Department {
 
 	@Column
 	private long departmentName;
+
+	@JoinColumn(name = "personal_id")
+	@ManyToMany(cascade = CascadeType.DETACH)
+	private List<Personal> personals = new ArrayList<Personal>();
+
 
 	public Department(long departmentName) {
 		super();

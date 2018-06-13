@@ -1,6 +1,7 @@
 package com.project.yasar.onduty.domain;
 import javax.persistence.*;
 
+
 @Entity
 public class Message {
 	@Id
@@ -17,9 +18,9 @@ public class Message {
 	@Enumerated(EnumType.ORDINAL)
 	private State state;  
 	
-	//foreignkey
+
 	@JoinColumn(name = "conversation_id")
-	//@OneToOne(cascade = CascadeType.DETACH)
+	@OneToOne(cascade = CascadeType.DETACH)
 	private Conversation conversation;
 
 	public Message(String messageContent, MessageState messageState, State state, Conversation conversation) {
