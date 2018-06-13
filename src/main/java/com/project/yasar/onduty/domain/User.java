@@ -1,43 +1,40 @@
 package com.project.yasar.onduty.domain;
 
 public class User {
-  private long Userid;
-  private String Name;
-  private String Surname;
-  private String Email;
+  private long userid;
+  private String name;
+  private String surname;
+  private String email;
   
 
 
-public User(long userid, String name, String surname, String email) {
-	super();
-	Userid = userid;
-	Name = name;
-	Surname = surname;
-	Email = email;
+public User() {
+	
 }
+
 public long getUserid() {
-	return Userid;
+	return userid;
 }
 public void setUserid(long userid) {
-	Userid = userid;
+	this.userid = userid;
 }
 public String getName() {
-	return Name;
+	return name;
 }
 public void setName(String name) {
-	Name = name;
+	this.name = name;
 }
 public String getSurname() {
-	return Surname;
+	return surname;
 }
 public void setSurname(String surname) {
-	Surname = surname;
+	this.surname = surname;
 }
 public String getEmail() {
-	return Email;
+	return email;
 }
 public void setEmail(String email) {
-	Email = email;
+	this.email = email;
 }
   
   
