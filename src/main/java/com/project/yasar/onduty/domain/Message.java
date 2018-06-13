@@ -13,10 +13,6 @@ public class Message {
 	private State state;  
 
 
-public Message() {
-
-}
-
 
 public long getMessageid() {
 	return Messageid;
