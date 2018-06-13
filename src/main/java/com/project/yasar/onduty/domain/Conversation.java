@@ -11,14 +11,39 @@ public class Conversation {
 	private long id;  //conversation_id
 	
 	@Column
-	private Date conversationdate;
+	private Date conversationDate;
 
-	public Conversation(Date conversationdate) {
+	public Conversation(Date conversationDate) {
 		super();
-		this.conversationdate = conversationdate;
+		this.conversationDate = conversationDate;
 	}
+
+	public Conversation() {
+	
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public Date getConversationDate() {
+		return conversationDate;
+	}
+
+	public void setConversationDate(Date conversationDate) {
+		this.conversationDate = conversationDate;
+	}
+
+	
 	
 	//foreign key yok
+	
+	
+	//COMPLETED!
 	
 	
 	

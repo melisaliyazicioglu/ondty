@@ -20,7 +20,7 @@ public class Message {
 	
 	//foreignkey
 	@JoinColumn(name = "conversation_id")
-	@OneToOne(cascade = CascadeType.DETACH)
+	//@OneToOne(cascade = CascadeType.DETACH)
 	private Conversation conversation;
 
 	public Message(String messageContent, MessageState messageState, State state, Conversation conversation) {
