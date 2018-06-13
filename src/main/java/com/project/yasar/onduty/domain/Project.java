@@ -1,8 +1,7 @@
 package com.project.yasar.onduty.domain;
 
 import java.util.Date;
-
-                                        //foreign key yok 
+                               //foreign key yok 
 import javax.persistence.*;
 
 public class Project {
