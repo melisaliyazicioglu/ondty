@@ -1,6 +1,7 @@
 package com.project.yasar.onduty.domain;
 import javax.persistence.*;
 
+@Entity
 public class Message {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

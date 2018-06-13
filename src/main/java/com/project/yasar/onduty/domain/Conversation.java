@@ -3,6 +3,7 @@ package com.project.yasar.onduty.domain;
 import java.util.Date;
 import javax.persistence.*;
 
+@Entity
 public class Conversation {
 	
 	@Id

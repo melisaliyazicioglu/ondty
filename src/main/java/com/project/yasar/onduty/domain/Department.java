@@ -1,7 +1,7 @@
 package com.project.yasar.onduty.domain;
 
 import javax.persistence.*;
-
+@Entity
 public class Department {
 	
 	@Id
