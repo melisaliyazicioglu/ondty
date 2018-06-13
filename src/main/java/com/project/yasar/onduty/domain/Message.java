@@ -1,66 +1,84 @@
 package com.project.yasar.onduty.domain;
+import javax.persistence.*;
+
 public class Message {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id; //messageid
+	@Column
+	private String messageContent;
 	
-	private long Messageid;
-	//private int Messagestate;
-	private String Messagecontent;
-	private long Conversationid;
-
- // @Column(name="messagestate")
-
-	private MessageState messagestate;
+	@Column
+	@Enumerated(EnumType.ORDINAL)
+	private MessageState messageState;
 	
+	@Column
+	@Enumerated(EnumType.ORDINAL)
 	private State state;  
+	
+	//foreignkey
+	@JoinColumn(name = "conversation_id")
+	//@OneToOne(cascade = CascadeType.DETACH)
+	private Conversation conversation;
 
+	public Message(String messageContent, MessageState messageState, State state, Conversation conversation) {
+		super();
+		this.messageContent = messageContent;
+		this.messageState = messageState;
+		this.state = state;
+		this.conversation = conversation;
+	}
 
+	public Message() {
+		
 
-public long getMessageid() {
-	return Messageid;
-}
+	}
 
+	public long getId() {
+		return id;
+	}
 
-public void setMessageid(long messageid) {
-	Messageid = messageid;
-}
+	public void setId(long id) {
+		this.id = id;
+	}
 
+	public String getMessageContent() {
+		return messageContent;
+	}
 
-public String getMessagecontent() {
-	return Messagecontent;
-}
+	public void setMessageContent(String messageContent) {
+		this.messageContent = messageContent;
+	}
 
+	public MessageState getMessageState() {
+		return messageState;
+	}
 
-public void setMessagecontent(String messagecontent) {
-	Messagecontent = messagecontent;
-}
+	public void setMessageState(MessageState messageState) {
+		this.messageState = messageState;
+	}
 
+	public State getState() {
+		return state;
+	}
 
-public long getConversationid() {
-	return Conversationid;
-}
+	public void setState(State state) {
+		this.state = state;
+	}
 
+	public Conversation getConversation() {
+		return conversation;
+	}
 
-public void setConversationid(long conversationid) {
-	Conversationid = conversationid;
-}
-
-
-public MessageState getMessagestate() {
-	return messagestate;
-}
-
-
-public void setMessagestate(MessageState messagestate) {
-	this.messagestate = messagestate;
-}
-
-
-public State getState() {
-	return state;
-}
-
-
-public void setState(State state) {
-	this.state = state;
-}
+	public void setConversation(Conversation conversation) {
+		this.conversation = conversation;
+	}
+	
+	
+	
+	
+	
+	
+	
 
 }
