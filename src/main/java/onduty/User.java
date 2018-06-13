@@ -6,6 +6,8 @@ public class User {
   private String Surname;
   private String Email;
   
+
+
 public User(long userid, String name, String surname, String email) {
 	super();
 	Userid = userid;
@@ -13,7 +15,6 @@ public User(long userid, String name, String surname, String email) {
 	Surname = surname;
 	Email = email;
 }
-
 public long getUserid() {
 	return Userid;
 }
