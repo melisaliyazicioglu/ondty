@@ -13,6 +13,7 @@
         <mapping package="com.project.yasar.onduty.domain"/>
         <mapping class="com.project.yasar.onduty.domain.User"/>
         <mapping class="com.project.yasar.onduty.domain.Credential"/>
+        <mapping class="com.project.yasar.onduty.domain.Personal"/>
 
     </session-factory>
 </hibernate-configuration>
