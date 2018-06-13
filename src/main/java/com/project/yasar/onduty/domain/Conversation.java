@@ -1,7 +1,6 @@
 package com.project.yasar.onduty.domain;
 
 import java.util.Date;
-
 import javax.persistence.*;
 
 public class Conversation {

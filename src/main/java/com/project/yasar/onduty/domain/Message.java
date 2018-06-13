@@ -2,11 +2,9 @@ package com.project.yasar.onduty.domain;
 import javax.persistence.*;
 
 public class Message {
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id; //messageid
-	
 	@Column
 	private String messageContent;
 	

@@ -1,7 +1,6 @@
 package com.project.yasar.onduty.domain;
 
 import javax.persistence.*;
-
 public class MessageInformation {
 /*
 	@Id

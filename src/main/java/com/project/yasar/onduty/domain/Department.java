@@ -20,6 +20,22 @@ public class Department {
 
 	}
 
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public long getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(long departmentName) {
+		this.departmentName = departmentName;
+	}
+
 	
 	
 }
