@@ -10,9 +10,9 @@ import org.hibernate.cfg.Configuration;
 public class TestMain {
     public static void main(String[] args){
         User user =new User();
-        user.setEmail("sdfsdf");
-        user.setName("sdfsd");
-        user.setSurname("sdfsd");
+        user.setEmail("admin@admin.com");
+        user.setName("admin");
+        user.setSurname("admin");
       Credential credential = new Credential(user,"admin","admin",UserType.MOBIL);
       Personal personal = new Personal();
 
