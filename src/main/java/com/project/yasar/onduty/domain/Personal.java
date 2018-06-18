@@ -9,23 +9,23 @@ public class Personal {
       @Id
       @GeneratedValue(strategy=GenerationType.AUTO)
        private long id;
-    @JoinColumn(name = "user_id")
+    @JoinColumn
     @OneToOne(cascade = CascadeType.DETACH)
       private User user;
 
-    @JoinColumn(name = "task_id")
+    @JoinColumn
     @ManyToMany(cascade = CascadeType.DETACH)
     private List<Task> tasks = new ArrayList<Task>();
 
-    @JoinColumn(name ="role_id")
+    @JoinColumn
     @OneToMany(cascade = CascadeType.DETACH)
     private List<Role> roles = new ArrayList<Role>();
 
-    @JoinColumn(name = "group_id")
+    @JoinColumn
     @ManyToMany(cascade = CascadeType.DETACH)
     private List<Group> groups = new ArrayList<Group>();
 
-    @JoinColumn(name = "department_id")
+    @JoinColumn
     @ManyToMany(cascade = CascadeType.DETACH)
     private List<Department> departments = new ArrayList<Department>();
 

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+@Entity(name = "app_group")
 public class Group {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -12,7 +12,7 @@ public class Group {
     @Column
     private String groupName;
 
-    @JoinColumn(name = "personal_id")
+    @JoinColumn
     @ManyToMany(cascade = CascadeType.DETACH)
     private List<Personal> personals = new ArrayList<Personal>();
 

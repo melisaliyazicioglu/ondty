@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+@Entity(name = "app_right")
 public class Right {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -15,7 +15,7 @@ public class Right {
     @Enumerated(EnumType.ORDINAL)
     private State state;
 
-    @JoinColumn(name = "role_id")
+    @JoinColumn
     @ManyToMany(cascade = CascadeType.DETACH)
     private List<Role> roles = new ArrayList<Role>();
 
